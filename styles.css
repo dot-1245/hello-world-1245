@@ -16,7 +16,7 @@ body {
 
 .side-menu {
     width: 250px;
-    background-color: #333;
+    background-color: #000000;
     position: fixed;
     top: 0;
     left: -250px; /* 初期状態では画面外に隠しておく */
@@ -31,11 +31,11 @@ body {
 
 .side-menu ul li {
     padding: 10px;
-    border-bottom: 1px solid #444;
+    border-bottom: 1px solid #ffffff;
 }
 
 .side-menu ul li a {
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
 }
 
