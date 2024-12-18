@@ -7,23 +7,27 @@
 </head>
 <body>
     <!-- ハンバーガーボタン -->
-    <button class="menu-toggle">≡</button> 
+    <button class="menu-toggle" aria-label="メニューを開く">≡</button> 
     
     <!-- サイドメニュー -->
     <div class="side-menu" id="sideMenu">
-        <button class="close-menu">×</button> <!-- 閉じるボタン -->
+        <button class="close-menu" aria-label="メニューを閉じる">×</button> <!-- 閉じるボタン -->
         <ul>
-            <li><a href="#">メインページ</a></li>
-            <li><a href="#">コミュニティ・ポータル</a></li>
-            <li><a href="#">カテゴリ</a></li>
-            <li><a href="#">編集室</a></li>
-            <li><a href="#">お知らせ</a></li>
-            <li><a href="#">最近の更新</a></li>
+            <li><a href="#" title="Go to main page in Japanese">メインページ</a> | <a href="#" title="Go to main page in English">index</a></li>
+            <li><a href="#" title="Go to profile in Japanese">プロフィール</a> | <a href="#" title="Go to profile in English">profile</a></li>
+            <li><a href="#" title="Go to contact in Japanese">コンタクト</a> | <a href="#" title="Go to contact in English">contact me</a></li>
+            <li><a href="#" title="Go to social media in Japanese">ソーシャルメディア</a> | <a href="#" title="Go to social media in English">sns</a></li>
+            <li><a href="#" title="Go to readme in Japanese">お知らせ</a> | <a href="#" title="Go to readme in English">readme</a></li>
         </ul>
+        
     </div>
+    
     <div class="profile">
-        hi guys,im dot. my birthday is "12/06/27. nice to meet u
+        <p>hi guys,im dot. my birthday is "12/06/27. nice to meet u</p>
+        <p>皆さんこんにちは。どっとです。私のサイトへようこそ。</p>
+        <p>私の生年月日は2012/06/27です。よろしくお願いします。</p>
     </div>
-     <script src="script.js"></script>
+    
+    <script src="script.js"></script>
 </body>
 </html>
