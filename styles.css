@@ -1,0 +1,10 @@
+/* ハンバーガーボタン（≡）のスタイル */
+.sidemenu {
+    position: fixed;  /* 固定位置にする */
+    top: 10px;        /* 上から10pxの位置 */
+    right: 10px;      /* 右から10pxの位置 */
+    font-size: 30px;  /* アイコンのサイズ */
+    background: none; /* 背景をなしに */
+    border: none;     /* 枠線をなしに */
+    cursor: pointer;  /* カーソルをポインターに */
+}
