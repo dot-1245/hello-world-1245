@@ -42,3 +42,41 @@ body {
 .side-menu.show {
     left: 0; /* ボタンを押したときに表示 */
 }
+/* メニューを開いた状態 */
+.side-menu.show {
+    left: 0; /* ボタンを押したときに表示 */
+}
+
+/* 閉じるボタンのスタイル */
+.close-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: white; /* 白い文字 */
+}
+
+/* メニューの背景色、幅、位置の調整 */
+.side-menu {
+    width: 250px;
+    background-color: #000000;
+    position: fixed;
+    top: 0;
+    left: -250px; /* 初期状態では画面外に隠しておく */
+    height: 100%;
+    transition: left 0.3s ease-in-out;
+}
+
+/* サイドメニュー内のリンクのスタイル */
+.side-menu ul li {
+    padding: 10px;
+    border-bottom: 1px solid #ffffff;
+}
+
+.side-menu ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
