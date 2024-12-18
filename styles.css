@@ -1,10 +1,44 @@
-/* ハンバーガーボタン（≡）のスタイル */
-.sidemenu {
-    position: fixed;  /* 固定位置にする */
-    top: 10px;        /* 上から10pxの位置 */
-    right: 10px;      /* 右から10pxの位置 */
-    font-size: 30px;  /* アイコンのサイズ */
-    background: none; /* 背景をなしに */
-    border: none;     /* 枠線をなしに */
-    cursor: pointer;  /* カーソルをポインターに */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-toggle {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.side-menu {
+    width: 250px;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    left: -250px; /* 初期状態では画面外に隠しておく */
+    height: 100%;
+    transition: left 0.3s ease-in-out;
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.side-menu ul li {
+    padding: 10px;
+    border-bottom: 1px solid #444;
+}
+
+.side-menu ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.side-menu.show {
+    left: 0; /* ボタンを押したときに表示 */
 }
