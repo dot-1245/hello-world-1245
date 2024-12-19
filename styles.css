@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.menu-toggle {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.side-menu {
+    width: 250px;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    left: -250px; /* 初期状態では画面外に隠しておく */
+    height: 100%;
+    transition: left 0.3s ease-in-out;
+    z-index: 2; /* メニューを最前面に表示 */
+}
+
+.side-menu.show {
+    left: 0; /* ボタンを押したときに表示 */
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 60px; /* メニューの上部に少し余白を加える */
+}
+
+.side-menu ul li {
+    padding: 15px;
+    border-bottom: 1px solid #444;
+}
+
+.side-menu ul li a {
+    color: #fff; /* リストのリンクを白色に */
+    text-decoration: none;
+}
+
+.side-menu ul li a:hover {
+    color: #ff6347; /* ホバー時に色を変更 */
+}
+
+/* 閉じるボタンのスタイル */
+.close-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: white; /* 白い文字 */
+}
+
+/* コンテンツのスタイル */
+.content {
+    margin: 80px auto;
+    padding: 20px;
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.content h1 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.content p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #666;
+}
+
+.content a {
+    color: #007BFF; /* リンクの色 */
+    text-decoration: none; /* 下線を削除 */
+}
+
+.content a:hover {
+    text-decoration: underline; /* ホバー時に下線を表示 */
+}
+
+.profile {
+    position: absolute; /* 絶対位置で配置 */
+    top: 90px; /* 上から20px */
+    left: 50%; /* 横の中央に配置 */
+    transform: translateX(-50%); /* 完全に中央揃え */
+    background-color: #ffffff; /* プロフィール部分の背景色 */
+    padding: 20px; /* 内側の余白 */
+    border-radius: 10px; /* 角を丸くする */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 軽い影 */
+    font-size: 18px; /* フォントサイズ */
+    line-height: 1.5; /* 行間の調整 */
+    color: #333333; /* テキストカラー */
+    max-width: 600px; /* 最大幅 */
+    width: 100%; /* 幅を100%に設定して、モバイルでも対応 */
+    text-align: center; /* テキストを中央揃え */
+}
+
+/* リンクのスタイル */
+.profile a {
+    color: #007BFF; /* リンクの色 */
+    text-decoration: none; /* 下線を削除 */
+}
+
+.profile a:hover {
+    text-decoration: underline; /* ホバー時に下線を表示 */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #ff0000;
+    margin-right: 10px;
+}
+
+ul li a:hover {
+    color: #ff0000;
+}
