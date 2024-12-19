@@ -2,6 +2,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
 .menu-toggle {
@@ -16,35 +18,37 @@ body {
 
 .side-menu {
     width: 250px;
-    background-color: #000000;
+    background-color: #333;
     position: fixed;
     top: 0;
     left: -250px; /* 初期状態では画面外に隠しておく */
     height: 100%;
     transition: left 0.3s ease-in-out;
+    z-index: 2; /* メニューを最前面に表示 */
+}
+
+.side-menu.show {
+    left: 0; /* ボタンを押したときに表示 */
 }
 
 .side-menu ul {
     list-style: none;
     padding: 0;
+    margin-top: 60px; /* メニューの上部に少し余白を加える */
 }
 
 .side-menu ul li {
-    padding: 10px;
-    border-bottom: 1px solid #ffffff;
+    padding: 15px;
+    border-bottom: 1px solid #444;
 }
 
 .side-menu ul li a {
-    color: rgb(255, 255, 255);
+    color: #fff; /* リストのリンクを白色に */
     text-decoration: none;
 }
 
-.side-menu.show {
-    left: 0; /* ボタンを押したときに表示 */
-}
-/* メニューを開いた状態 */
-.side-menu.show {
-    left: 0; /* ボタンを押したときに表示 */
+.side-menu ul li a:hover {
+    color: #ff6347; /* ホバー時に色を変更 */
 }
 
 /* 閉じるボタンのスタイル */
@@ -59,80 +63,38 @@ body {
     color: white; /* 白い文字 */
 }
 
-/* メニューの背景色、幅、位置の調整 */
-.side-menu {
-    width: 250px;
-    background-color: #000000;
-    position: fixed;
-    top: 0;
-    left: -250px; /* 初期状態では画面外に隠しておく */
-    height: 100%;
-    transition: left 0.3s ease-in-out;
+/* コンテンツのスタイル */
+.content {
+    margin: 80px auto;
+    padding: 20px;
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-/* サイドメニュー内のリンクのスタイル */
-.side-menu ul li {
-    padding: 10px;
-    border-bottom: 1px solid #ffffff;
+.content h1 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333;
 }
 
-.side-menu ul li a {
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-}
-/* 全体のスタイル */
-body {
-    font-family: Arial, sans-serif; /* フォントをArialに設定 */
-    margin: 0;
-    padding: 0;
+.content p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #666;
 }
 
-/* メニューを開いた状態 */
-.side-menu.show {
-    left: 0; /* ボタンを押したときに表示 */
+.content a {
+    color: #007BFF; /* リンクの色 */
+    text-decoration: none; /* 下線を削除 */
 }
 
-/* メニューの基本スタイル */
-.side-menu {
-    width: 250px;
-    background-color: #000000;
-    position: fixed;
-    top: 0;
-    left: -250px; /* 初期状態では画面外に隠しておく */
-    height: 100%;
-    transition: left 0.3s ease-in-out;
+.content a:hover {
+    text-decoration: underline; /* ホバー時に下線を表示 */
 }
 
-/* サイドメニュー内のリストスタイル */
-.side-menu ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 60px; /* メニューの上部に少し余白を加える */
-}
-
-.side-menu ul li {
-    padding: 15px;
-    border-bottom: 1px solid #ffe4e4;
-}
-
-.side-menu ul li a {
-    color: #000000; /* リストのリンクを白色に */
-    text-decoration: none;
-}
-
-/* 閉じるボタンのスタイル */
-.close-menu {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 30px;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    color: rgb(0, 0, 0); /* 閉じるボタンの色 */
-}
-
-/* プロフィールのスタイル */
 .profile {
     position: absolute; /* 絶対位置で配置 */
     top: 90px; /* 上から20px */
@@ -159,6 +121,7 @@ body {
 .profile a:hover {
     text-decoration: underline; /* ホバー時に下線を表示 */
 }
+
 ul {
     list-style-type: none;
     padding: 0;
@@ -176,31 +139,4 @@ ul li a {
 
 ul li a:hover {
     color: #ff0000;
-}
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    position: relative;
-}
-
-.profile {
-    position: relative; /* 自己紹介エリアの位置を設定 */
-    z-index: 1; /* メニューより背面に表示されるように */
-    padding: 20px;
-}
-
-.side-menu {
-    width: 250px;
-    background-color: #ffffff;
-    position: fixed;
-    top: 0;
-    left: -250px; /* 初期状態では画面外に隠しておく */
-    height: 100%;
-    transition: left 0.3s ease-in-out;
-    z-index: 2; /* メニューを最前面に表示 */
-}
-
-.side-menu.show {
-    left: 0; /* ボタンを押したときに表示 */
 }
